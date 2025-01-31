@@ -8,25 +8,14 @@ export default function LoginPage() {
   const [user, setUser] = useState({
     email: "",
     password: "",
-    username: "",
   });
 
-  const onSignup = async () => {};
+  const onLogin = async () => {};
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1>Signup</h1>
+      <h1>Login</h1>
       <br />
-      <label htmlFor="username">username</label>
-      <input
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
-        id="username"
-        type="text"
-        value={user.username}
-        onChange={(e) => setUser({ ...user, username: e.target.value })}
-        placeholder="username"
-      />
-
       <label htmlFor="email">email</label>
       <input
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
@@ -49,11 +38,11 @@ export default function LoginPage() {
 
       <button
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
-        onClick={onSignup}
+        onClick={onLogin}
       >
-        Signup
+        Login
       </button>
-      <Link href="/login">Visit Login Page</Link>
+      <Link href="/signup">Visit Signup Page</Link>
     </div>
   );
 }
